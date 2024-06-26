@@ -6,7 +6,7 @@
 /*   By: kepouliq <kepouliq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 13:52:08 by kepouliq          #+#    #+#             */
-/*   Updated: 2024/06/25 15:58:41 by kepouliq         ###   ########.fr       */
+/*   Updated: 2024/06/26 10:52:32 by kepouliq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,7 +111,7 @@ char	*get_next_line(int fd)
 
 	line = NULL;
 	if (checks(fd, line, &rest) == -1)
-		return (rest);
+		return (NULL);
 	if (rest)
 		line = check_new_line_in_rest(&rest);
 	if (get_end_line(line) != -1)
